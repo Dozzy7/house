@@ -3,7 +3,7 @@
             <div class="container">
                 <div class="navbar-collapse collapse">
                     <ul class="nav nav-justified">
-                        <li><a href="index.php"><img width="90" src="img/logo.png"></a></li>
+                        
                         <li><a href="index.php">Home</a></li>
                         <li><a href="gallery.php">Gallery</a></li>
                         <li><a href="about.php">About Us</a></li>

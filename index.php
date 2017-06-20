@@ -14,14 +14,10 @@ require 'includes/db.connection.php';
 
     <!---------------- loging in for User---------------->
 
-<?php include 'templates/widget/login.php';?>
-
-<section id="b_login">
+  <!---------------- Signing Up moddeling starts here ---------------->
+<section id="login">
 <div class=container>
     <div class="row">
-     <!---------------- Signing Up moddeling starts here ---------------->
-                    <h2>login for Buyer</h2>
-                    <h2>login for Buyer</h2>
                     
      <div class="modal-dialog modal-sm">
         <div class="modal-content">

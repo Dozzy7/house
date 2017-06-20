@@ -16,13 +16,11 @@ require 'includes/db.connection.php';
 
 <?php include 'templates/widget/login.php';?>
 
-<section id="a_login">
+<!---------------- Signing Up moddeling starts here ---------------->
+
+<section id="login">
 <div class=container>
-    <div class="row">
-     <!---------------- Signing Up moddeling starts here ---------------->
-                    <h2>login for Agent</h2>
-                    <h2>login for Agent</h2>
-                    
+    <div class="row">  
      <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
