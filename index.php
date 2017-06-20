@@ -25,7 +25,7 @@ require 'includes/db.connection.php';
                 <h4 class="modal-title">Login for Buyer</h4>
                     </div>
                         <div class="modal-body">
-                        <form>
+                        <form action="scripts/scripts.Buyer.Login.php" method="POST">
                             <div class="form-group">
                                 <input class="form-control" placeholder="Username" type="text" name="username" required="" >
                             </div>
