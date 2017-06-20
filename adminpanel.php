@@ -51,7 +51,37 @@
     </div> 
 
     <div class="col-sm-6">
-       2
+       <h2>Property Table</h2>
+        <table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>@mdo</td>
+      <td><input type="button" name="delete" value="Delete"></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>@fat</td>
+      <td><input type="button" name="delete" value="Delete"></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>@twitter</td>
+      <td><input type="button" name="delete" value="Delete"></td>
+    </tr>
+  </tbody>
+</table>
     </div>
         </div>
     </div>
