@@ -98,7 +98,7 @@
                             </div>
 
                             <div class="form-group text-center">
-                                <input class="btn btn-default" type="submit" id="insert" name="insert" value="Confirm">
+                                <input class="btn btn-primary" type="submit" id="insert" name="insert" value="Confirm">
                             </div>
 
                 </form>
