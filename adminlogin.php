@@ -43,8 +43,6 @@ require 'includes/db.connection.php';
                             <li><a href="">Login as Buyer</a></li>
                             <li><a href=""> Login as Agent</a></li>
                         </p>
-                            
-                        
                     </div>
                 </div>
             </div>           
