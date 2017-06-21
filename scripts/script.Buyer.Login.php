@@ -9,7 +9,7 @@
       $password = mysqli_escape_string($conn,$_POST['password']); 
     
       // 
-      $query = " SELECT * FROM buyers WHERE username = '$username' and upassword = '$password' ";
+      $query = " SELECT username FROM buyers WHERE username = '$username' and upassword = '$password' ";
       $result = mysqli_query($conn, $query);
       
       $row = mysqli_fetch_assoc($result);
@@ -22,7 +22,7 @@
       if($count == 1) {
          isset($_SESSION['login_buyer']);
          $_SESSION['login_buyer'] = $username;
-         header("location: ../home.php");
+         header("location: ../buyerlanding.php");
       }else {
          $error = "Your Login Name or Password is invalid";
          $_SESSION['login_error'] = $error;

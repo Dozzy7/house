@@ -9,8 +9,8 @@
       $password = mysqli_escape_string($conn,$_POST['password']); 
     
       // 
-      $query = " SELECT * FROM admin WHERE ausername = '$username' and apassword = '$password' ";
-      $result = mysqli_query($conn,$query);
+      $query = " SELECT username FROM admin WHERE ausername = '$username' and apassword = '$password' ";
+      $result = mysqli_query($conn, $query);
       
       $row = mysqli_fetch_assoc($result);
       $active = $row['ausername'];
@@ -20,11 +20,10 @@
       
       // If result matched $myusername and $mypassword, table row must be 1 row	
       if($count == 1) {
-         isset($_SESSION['login_agents']);
-         $_SESSION['login_agents'] = $username;
-
-         header("location: ../admin.php");
-      }else { 
+         isset($_SESSION['login_admin']);
+         $_SESSION['login_admin'] = $username;
+         header("location: ../adminpanel.php");
+      }else {
          $error = "Your Login Name or Password is invalid";
          $_SESSION['login_error'] = $error;
 

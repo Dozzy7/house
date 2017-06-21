@@ -1,6 +1,7 @@
 <?php
 ob_start(); 
 require 'includes/db.connection.php';
+
 ?>
 <!doctype html>
 <html class="no-js" lang="">
@@ -23,13 +24,14 @@ require 'includes/db.connection.php';
                 <h4 class="modal-title">Login for Agent</h4>
                     </div>
                         <div class="modal-body">
+                        <p></p>
                         <form action="scripts/script.Agent.Login.php" method="POST">
                             <div class="form-group">
                                 <input class="form-control" placeholder="Username" type="text" name="username" required>
                             </div>
                                       
                              <div class="form-group">
-                                <input class="form-control" placeholder="Password" type="password" id="inputPasword" required>
+                                <input class="form-control" placeholder="Password" type="password" name="password" required>
                             </div>
                             <div class="modal-footer">
                                 <button class="btn btn-primary btn-block" type="submit">Login</button> 
@@ -49,13 +51,12 @@ require 'includes/db.connection.php';
         </div>
     </div>
 </section> >
-                    <!---------------- Ends here ---------------->
-
+<!---------------- Ends here ---------------->
     <!---------------- Footer ---------------->
     <?php include 'templates/footer.php';?>
 
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="js/main.js"></script>
         <script src="js/bootstrap.min.js"></script>
