@@ -8,7 +8,8 @@
                         <li><a href="gallery.php">Gallery</a></li>
                         <li><a href="about.php">About Us</a></li>
                         <li><a href="contactus.php">Contact Us</a></li>
-                        <li><a data-scroll href="admin.php">Admin</a></li>
+                        <li><a href="agentlogin.php">Agents</a></li>
+                        <li><a data-scroll href="adminlogin.php">Admin</a></li>
                     </ul>
                 </div>
             </div>

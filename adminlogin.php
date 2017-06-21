@@ -23,19 +23,20 @@ require 'includes/db.connection.php';
                 <h4 class="modal-title">Login for Admin</h4>
                     </div>
                         <div class="modal-body">
-                        <form>
+                        <form action="scripts/script.Admin.Login.php" method="POST">
                             <div class="form-group">
-                                <input class="form-control" placeholder="Username" type="text" name="username" required="" >
+                                <input class="form-control" placeholder="Username" type="text" name="username" required>
                             </div>
                                       
                              <div class="form-group">
-                                <input class="form-control" placeholder="Password" type="password" id="inputPasword" required="" >
-                            </div>           
+                                <input class="form-control" placeholder="Password" type="password" name="password" required>
+                            </div> 
+                            <div class="modal-footer">
+                                <button class="btn btn-primary btn-block" type="submit">Login</button> 
+                            </div>          
                         </form>
                             </div>
-                            <div class="modal-footer">
-                        <button class="btn btn-primary btn-block" type="submit">Login</button> 
-                    </div>
+                     
                     <div class="text-center">
                         <p>
                             <li><a href="">Signup as Buyer </a></li>

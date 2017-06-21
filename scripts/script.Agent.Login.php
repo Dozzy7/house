@@ -23,7 +23,7 @@
          isset($_SESSION['login_agents']);
          $_SESSION['login_agents'] = $username;
 
-         header("location: ../agent.php");
+         header("location: ../agentpanel.php");
       }else { 
          $error = "Your Login Name or Password is invalid";
          $_SESSION['login_error'] = $error;

@@ -72,11 +72,12 @@
    
             
 
-         <form id="form" method="POST" action="scripts/admin.add_house.php" type="multipart/form-data">
-
+         <form id="form" method="POST" action="scripts/agent.Add.House.php" type="multipart/form-data">
+                          <!--  
                             <div class="form-group">
                                 <input id="btn_upload" type="text"  name="image" required>
                             </div>
+                           -->  
                             <div class="form-group">
                                 <input class="form-control" type="text" placeholder="Price" name="price" required>
                             </div>
@@ -112,7 +113,7 @@
 
     <!---------------- footer ---------------->
 <?php include 'templates/footer.php';?>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="js/main.js"></script>
