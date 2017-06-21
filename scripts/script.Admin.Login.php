@@ -9,11 +9,11 @@
       $password = mysqli_escape_string($conn,$_POST['password']); 
     
       // 
-      $query = " SELECT * FROM agents WHERE username = '$username' and apassword = '$password' ";
+      $query = " SELECT * FROM admin WHERE ausername = '$username' and apassword = '$password' ";
       $result = mysqli_query($conn,$query);
       
       $row = mysqli_fetch_assoc($result);
-      $active = $row['username'];
+      $active = $row['ausername'];
       
       //check if the record exists
       $count = mysqli_num_rows($result);

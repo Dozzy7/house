@@ -13,11 +13,7 @@ require 'includes/db.connection.php';
     <?php include "templates/header.php";?> 
 
     <!---------------- loging in for User---------------->
-
-<?php include 'templates/widget/login.php';?>
-
 <!---------------- Signing Up moddeling starts here ---------------->
-
 <section id="login">
 <div class=container>
     <div class="row">  
@@ -27,20 +23,19 @@ require 'includes/db.connection.php';
                 <h4 class="modal-title">Login for Agent</h4>
                     </div>
                         <div class="modal-body">
-                        <form>
+                        <form action="scripts/script.Agent.Login.php" method="POST">
                             <div class="form-group">
-                                <input class="form-control" placeholder="Username" type="text" name="username" required="" >
+                                <input class="form-control" placeholder="Username" type="text" name="username" required>
                             </div>
                                       
                              <div class="form-group">
-                                <input class="form-control" placeholder="Password" type="password" id="inputPasword" required="" >
-                            </div>
-                                       
-                        </form>
+                                <input class="form-control" placeholder="Password" type="password" id="inputPasword" required>
                             </div>
                             <div class="modal-footer">
-                        <button class="btn btn-primary btn-block" type="submit">Login</button> 
-                    </div>
+                                <button class="btn btn-primary btn-block" type="submit">Login</button> 
+                            </div>          
+                        </form>
+                            </div>
                     <div class="text-center">
                         <p>
                             <li><a href="">Signup as Buyer </a></li>
@@ -58,7 +53,6 @@ require 'includes/db.connection.php';
 
     <!---------------- Footer ---------------->
     <?php include 'templates/footer.php';?>
-
 
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

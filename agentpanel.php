@@ -23,19 +23,12 @@
                     <figure class="pull-left">
                         <img class="media-object img-rounded img-responsive" src="http://placehold.it/350x250" alt="placehold.it/350x250" >
                     </figure>
-                </div>
-                <div class="col-md-6">
-                    <h4 class="list-group-item-heading"> List group heading </h4>
-                    <p class="list-group-item-text"> 3 bedroom house, 2 bathrooms,1 dining room.                         
-                    </p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <h3 class="text-center">3000RMB</h3>
-                    
-                    <input class="btn btn-primary btn-lg btn-block" type="submit" value="Edit">
-                    <input class="btn btn-danger btn-lg btn-block" type="submit" value="Delete">
-                    
-                    
+                        <input type="hodden" name="houseID" value="">
+                        <input class="btn btn-primary btn-lg btn-block" type="submit" value="Edit">
+                    </form>
+                    <form action="scripts/agent.Delete.House.php" method="POST">
+                        <input class="btn btn-danger btn-lg btn-block" type="submit" value="Delete">    
+                    </form>                    
                 </div>
           </a>  
     </div> 
@@ -43,7 +36,6 @@
 <div class=col-sm-1>
     
 </div>
-
 
     <div class="col-sm-4 adding">
         <div class="">
@@ -54,11 +46,12 @@
        
             
 
-         <form id="form" method="POST" action="scripts/admin.add_house.php" type="multipart/form-data">
-
+         <form id="form" method="POST" action="scripts/agent.Add.House.php" type="multipart/form-data">
+                          <!--  
                             <div class="form-group">
                                 <input id="btn_upload" type="text"  name="image" required>
                             </div>
+                           -->  
                             <div class="form-group">
                                 <input class="form-control" type="text" placeholder="Price" name="price" required>
                             </div>
@@ -98,7 +91,7 @@
 
     <!---------------- footer ---------------->
 <?php include 'templates/footer.php';?>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="js/main.js"></script>
