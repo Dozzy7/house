@@ -2,18 +2,17 @@
     include 'scripts/agent.Session.php';
 ?>
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
     <?php include 'templates/head.php';?>
 
     <body>
 
-      <!---------------- Header ---------------->
+    <!---------------- Header ---------------->
      <?php include 'templates/header.php';?>
 
     <!----------------  backgroundimage ---------------->
  
-
-     <!----------------  ---------------->
+    <!----------------  ---------------->
      <section id="admin_tab">
     <div class="container">
           <div class="row">        
@@ -35,18 +34,15 @@
   </thead>
   <tbody>
    <?php
-    
-    $userID = $_SESSION['login_agent'];
-
-    $query= "SELECT * FROM houses,agent_houses,agents WHERE agents.userID = agent_houses.agentID AND houses.houseID = agent_houses.houseID AND userID ='$userID'";
+   $userID = $_SESSION['login_agents'];
+    $query= "SELECT * FROM houses WHERE agentID = '$userID' ";
     $result = mysqli_query($conn, $query);
-
-    $row = mysqli_fetch_assoc($result);
     while($row = mysqli_fetch_assoc($result)){
-        // while loop begins here
+    // while loop begins here
     ?>
     <tr>
       <th scope="row"><?php echo $row['houseID'] ?></th>
+      <td><?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']) ?></td>
       <td><?php echo $row['description'] ?></td>
       <td><?php echo $row['price'] ?></td>
       <td><?php echo $row['listing'] ?></td>
@@ -57,37 +53,30 @@
                 <input type="hidden" name="houseID" value="<?php $row['houseID'] ?>"> 
                 <input type="submit" value="Edit">
             </form>
-            <form action="scripts/agent.Edit.House" method="POST">
+            <form action="scripts/agent.Delete.House" method="POST">
                 <input type="hidden" name="houseID" value="<?php $row['houseID'] ?>"> 
                 <input type="button" name="delete" value="Delete">
-            </form>     
+            </form>
         </td>
     </tr>
     <?php
     //while loop ends here
     }
-        mysql_free_result($result);  
-        mysql_close($conn);
     ?>
   </tbody>
 </table>
      </div>  
 
      <div class="col-sm-2">
-         
      </div> 
 
      <div class="col-sm-3">
      <h1>Adding property</h1>
-            <form id="" method="POST" action="scripts/admin.add_house.php" type="multipart/form-data" target="iframe">
-                <input type="file" name="image"> <input type="submit" value="Upload Image">
-            </form>
          <form id="form" method="POST" action="scripts/agent.Add.House.php" type="multipart/form-data">
-                          <!--  
+                     
                             <div class="form-group">
-                                <input id="btn_upload" type="text"  name="image" required>
-                            </div>
-                           -->  
+                                <input id="image" type="file"  name="image" required>
+                            </div> 
                             <div class="form-group">
                                 <input class="form-control" type="text" placeholder="Price" name="price" required>
                             </div>
@@ -109,7 +98,7 @@
                             </div>
 
                             <div class="form-group text-center">
-                                <input class="btn btn-default" type="submit" value="Confirm">
+                                <input class="btn btn-default" type="submit" id="insert" name="insert" value="Confirm">
                             </div>
 
                 </form>
