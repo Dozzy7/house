@@ -15,35 +15,61 @@
     <div class="container">
           <div class="row">        
         <!--For adding a new house-->
-                    
-<div class="col-sm-7">
-        <h1>Editing/ Deleting Property</h1>
-              <a href="#" class="list-group-item">
-                <div class="media col-md-3">
-                    <figure class="pull-left">
-                        <img class="media-object img-rounded img-responsive" src="http://placehold.it/350x250" alt="placehold.it/350x250" >
-                    </figure>
-                        <input type="hodden" name="houseID" value="">
-                        <input class="btn btn-primary btn-lg btn-block" type="submit" value="Edit">
-                    </form>
-                    <form action="scripts/agent.Delete.House.php" method="POST">
-                        <input class="btn btn-danger btn-lg btn-block" type="submit" value="Delete">    
-                    </form>                    
-                </div>
-          </a>  
-    </div> 
+     <div class="col-sm-7">
+         <h2>Editing and deleting property</h2>
+        <table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Address</th>
+      <th>Description</th>
+      <th>Listing</th>
+      <th>Price</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>@mdo</td>
+      <td>Mark</td>
+      <td>@mdo</td>
+      <td><input type="button" name="delete" value="Edit">
+      <input type="button" name="delete" value="Delete"></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>@fat</td>
+      <td>Jacob</td>
+      <td>@fat</td>
+      <td><input type="button" name="delete" value="Edit">
+      <input type="button" name="delete" value="Delete"></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>@twitter</td>
+      <td>Larry</td>
+      <td>@twitter</td>
+      <td><input type="button" name="delete" value="Edit">
+      <input type="button" name="delete" value="Delete"></td>
+    </tr>
+  </tbody>
+</table>
+     </div>  
 
-<div class=col-sm-1>
-    
-</div>
+     <div class="col-sm-2">
+         
+     </div> 
 
-    <div class="col-sm-4 adding">
-        <div class="">
-            <h1>Adding property</h1>
+     <div class="col-sm-3">
+     <h1>Adding property</h1>
             <form id="" method="POST" action="scripts/admin.add_house.php" type="multipart/form-data" target="iframe">
                 <input type="file" name="image"> <input type="submit" value="Upload Image">
             </form>
-       
+   
             
 
          <form id="form" method="POST" action="scripts/agent.Add.House.php" type="multipart/form-data">
@@ -77,12 +103,8 @@
                             </div>
 
                 </form>
-        </div>
-        
-        
-    </div>
-
-
+         
+     </div>            
 
         </div>
     </div>
