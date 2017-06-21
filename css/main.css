@@ -85,24 +85,9 @@ body > section{
     background-color: transparent;
 }
 
-/*===========For Slider===========*/
-section#slider{
-    min-height: 700px;
-    padding: 0px;
-}
-
-section#slider h2{
-    font-size: 4.5em;
-    color: #ffffff;
-    font-weight: bolder;
-}
-
-section#slider img{
-    margin: 0 auto;
-}
-
-.login{
-    text-align: center;
+/*===========For Information===========*/
+#login{
+    padding-top: 200px;
 }
 
 /*===========For Information===========*/

@@ -14,15 +14,9 @@ require 'includes/db.connection.php';
 
     <!---------------- loging in for User---------------->
 
-<?php include 'templates/widget/login.php';?>
-
-<section id="ad_login">
+<section id="login">
 <div class=container>
     <div class="row">
-     <!---------------- Signing Up moddeling starts here ---------------->
-                    <h2>login for Admin</h2>
-                    <h2>login for Admin</h2>
-                    
      <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
@@ -36,19 +30,28 @@ require 'includes/db.connection.php';
                                       
                              <div class="form-group">
                                 <input class="form-control" placeholder="Password" type="password" id="inputPasword" required="" >
-                            </div>
-                                       
+                            </div>           
                         </form>
                             </div>
                             <div class="modal-footer">
                         <button class="btn btn-primary btn-block" type="submit">Login</button> 
+                    </div>
+                    <div class="text-center">
+                        <p>
+                            <li><a href="">Signup as Buyer </a></li>
+                            <li><a href="">Signup as Agent </a></li>
+                            <li><a href="">Login as Buyer</a></li>
+                            <li><a href=""> Login as Agent</a></li>
+                        </p>
+                            
+                        
                     </div>
                 </div>
             </div>           
         </div>
     </div>
 </section> >
-                    <!---------------- Ends here ---------------->
+    <!---------------- Ends here ---------------->
 
     <!---------------- Footer ---------------->
     <?php include 'templates/footer.php';?>
