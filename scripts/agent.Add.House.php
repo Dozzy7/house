@@ -1,5 +1,5 @@
 <?php
-   require '../includes/db.connection.php';
+   include '../includes/db.Connection.php';
 
    // global variable [not sure they are needed]
    $userID;
@@ -15,8 +15,8 @@
       if(! get_magic_quotes_gpc()){
          
          // ensures that the String from the forms are inserted as the come
-         $userID = addslashes($_SESSION['login_agent']);
-         $image = $file = addslashes(file_get_contents($_FILES["image"]["tmp_name"])); 
+         $userID = addslashes($_POST['userID']);
+         $image = addslashes(file_get_contents($_FILES["image"]["name"])); 
          $description = addslashes($_POST['description']);
          $price = addslashes($_POST['price']);
          $rooms = addslashes($_POST['rooms']); 
@@ -24,7 +24,7 @@
          $city = addslashes($_POST['city']); 
          $listing = addslashes($_POST['listing']);  
       }else{
-
+         $userID =($_POST['userID']);
          $image = ($_POST['image']);
          $description = ($_POST['description']);
          $price = ($_POST['price']);

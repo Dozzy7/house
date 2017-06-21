@@ -23,6 +23,7 @@
   <thead>
     <tr>
       <th>#</th>
+      <th>#</th>
       <th>Description</th>
       <th>Price</th>
       <th>Listing</th>
@@ -42,7 +43,7 @@
     ?>
     <tr>
       <th scope="row"><?php echo $row['houseID'] ?></th>
-      <td><?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']) ?></td>
+      <td><?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image'] ).'" height="50" width="50" class="img-thumnail" />'?></td> 
       <td><?php echo $row['description'] ?></td>
       <td><?php echo $row['price'] ?></td>
       <td><?php echo $row['listing'] ?></td>
@@ -50,12 +51,14 @@
       <td><?php echo $row['city'] ?></td>
       <td>
             <form action="scripts/agent.Edit.House" method="POST">
-                <input type="hidden" name="houseID" value="<?php $row['houseID'] ?>"> 
+                <input type="hidden" name="userID" value="<?php echo $userID ?>">
+                <input type="hidden" name="houseID" value="<?php echo $row['houseID'] ?>">  
                 <input type="submit" value="Edit">
             </form>
             <form action="scripts/agent.Delete.House" method="POST">
-                <input type="hidden" name="houseID" value="<?php $row['houseID'] ?>"> 
-                <input type="button" name="delete" value="Delete">
+                <input type="hidden" name="houseID" value="<?php echo $userID ?>">
+                <input type="hidden" name="houseID" value="<?php echo $row['houseID'] ?>">  
+                <input type="submit" name="delete" value="Delete">
             </form>
         </td>
     </tr>
@@ -73,12 +76,12 @@
      <div class="col-sm-3">
      <h1>Adding property</h1>
          <form id="form" method="POST" action="scripts/agent.Add.House.php" type="multipart/form-data">
-                     
+                            <input type="hidden" name="userID" value="<?php echo $userID ?>">
                             <div class="form-group">
                                 <input id="image" type="file"  name="image" required>
                             </div> 
                             <div class="form-group">
-                                <input class="form-control" type="text" placeholder="Price" name="price" required>
+                                <input class="form-control" type="number" placeholder="Price" name="price" required>
                             </div>
                             <div class="form-group">
                                 <input class="form-control" type="text" placeholder="street" name="street" required>
