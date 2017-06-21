@@ -9,7 +9,7 @@ require 'includes/db.connection.php';
 
 <body>
     <!---------------- Header ---------------->
-    <?php include "templates/header.php";?>
+    <?php include "templates/headerafter.php";?>
 
     <!----------------  slider ---------------->
     <section id="slider" class=" carousel slide" data-ride="carousel">

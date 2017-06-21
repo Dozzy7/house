@@ -82,6 +82,17 @@ body > section{
     background-color: #444fff;
 }
 
+.btn-default{
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.btn-default:hover,
+.btn-default:focus{
+    background-color: #444fff;
+}
+
 
 /*===========For Information===========*/
 #login{
