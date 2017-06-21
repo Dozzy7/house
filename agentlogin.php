@@ -1,7 +1,5 @@
 <?php
 ob_start(); 
-require 'includes/db.connection.php';
-
 ?>
 <!doctype html>
 <html class="no-js" lang="">
@@ -14,17 +12,16 @@ require 'includes/db.connection.php';
     <?php include "templates/header.php";?> 
 
     <!---------------- loging in for User---------------->
-<!---------------- Signing Up moddeling starts here ---------------->
+
 <section id="login">
 <div class=container>
-    <div class="row">  
+    <div class="row">
      <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">Login for Agent</h4>
                     </div>
                         <div class="modal-body">
-                        <p></p>
                         <form action="scripts/script.Agent.Login.php" method="POST">
                             <div class="form-group">
                                 <input class="form-control" placeholder="Username" type="text" name="username" required>
@@ -32,12 +29,13 @@ require 'includes/db.connection.php';
                                       
                              <div class="form-group">
                                 <input class="form-control" placeholder="Password" type="password" name="password" required>
-                            </div>
+                            </div> 
                             <div class="modal-footer">
                                 <button class="btn btn-primary btn-block" type="submit">Login</button> 
                             </div>          
                         </form>
                             </div>
+                     
                     <div class="text-center">
                         <p>
                             <li><a href="">Signup as Buyer </a></li>
@@ -51,10 +49,10 @@ require 'includes/db.connection.php';
         </div>
     </div>
 </section> >
-<!---------------- Ends here ---------------->
+    <!---------------- Ends here ---------------->
+
     <!---------------- Footer ---------------->
     <?php include 'templates/footer.php';?>
-
 
         <script src="js/vendor/jquery-1.11.2.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>

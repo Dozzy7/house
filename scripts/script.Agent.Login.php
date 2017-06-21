@@ -7,10 +7,10 @@
       // username and password sent from form 
       $username = mysqli_escape_string($conn,$_POST['username']);
       $password = mysqli_escape_string($conn,$_POST['password']); 
+    
       // 
       $query = " SELECT username FROM agents WHERE username = '$username' and apassword = '$password' ";
-      
-      $result = mysqli_query($conn,$query);
+      $result = mysqli_query($conn, $query);
       
       $row = mysqli_fetch_assoc($result);
       $active = $row['username'];
@@ -20,12 +20,10 @@
       
       // If result matched $myusername and $mypassword, table row must be 1 row	
       if($count == 1) {
-         //session_register("myusername");
-         isset($_SESSION['login_agents']);
-         $_SESSION['login_agents'] = $username;
-
+         isset($_SESSION['login_agent']);
+         $_SESSION['login_agent'] = $username;
          header("location: ../agentpanel.php");
-      }else { 
+      }else {
          $error = "Your Login Name or Password is invalid";
          $_SESSION['login_error'] = $error;
 
