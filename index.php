@@ -25,19 +25,19 @@ require 'includes/db.connection.php';
                 <h4 class="modal-title">Login for Buyer</h4>
                     </div>
                         <div class="modal-body">
-                        <form action="scripts/scripts.Buyer.Login.php" method="POST">
+                        <form action="scripts/script.Buyer.Login.php" method="POST">
                             <div class="form-group">
-                                <input class="form-control" placeholder="Username" type="text" name="username" required="" >
+                                <input class="form-control" placeholder="Username" type="text" name="username" required>
                             </div>
                                       
                              <div class="form-group">
-                                <input class="form-control" placeholder="Password" type="password" id="inputPasword" required="" >
+                                <input class="form-control" placeholder="Password" type="password" name="password" required>
                             </div>
-                                       
-                        </form>
-                            </div>
+                                   </div>
                             <div class="modal-footer">
-                        <button class="btn btn-primary btn-block" type="submit">Login</button> 
+                        <button class="btn btn-primary btn-block" type="submit">Login</button>           
+                        </form>
+                      
                     </div>
                 </div>
             </div>           
@@ -51,7 +51,7 @@ require 'includes/db.connection.php';
 
 
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="js/main.js"></script>
         <script src="js/bootstrap.min.js"></script>

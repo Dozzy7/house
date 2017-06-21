@@ -10,7 +10,7 @@
     
       // 
       $query = " SELECT * FROM buyers WHERE username = '$username' and upassword = '$password' ";
-      $result = mysqli_query($conn,$query);
+      $result = mysqli_query($conn, $query);
       
       $row = mysqli_fetch_assoc($result);
       $active = $row['username'];
@@ -22,7 +22,6 @@
       if($count == 1) {
          isset($_SESSION['login_buyer']);
          $_SESSION['login_buyer'] = $username;
-
          header("location: ../home.php");
       }else {
          $error = "Your Login Name or Password is invalid";
