@@ -1,3 +1,6 @@
+<?php
+    include 'scripts/agent.Session.php';
+?>
 <!doctype html>
 <html class="no-js" lang="">
     <?php include 'templates/head.php';?>
@@ -21,41 +24,51 @@
   <thead>
     <tr>
       <th>#</th>
-      <th>Address</th>
       <th>Description</th>
-      <th>Listing</th>
       <th>Price</th>
+      <th>Listing</th>
+      <th>Street</th>
+      <th>City</th>
+      <th></th>
       <th></th>
     </tr>
   </thead>
   <tbody>
+   <?php
+    
+    $userID = $_SESSION['login_agent'];
+
+    $query= "SELECT * FROM houses,agent_houses,agents WHERE agents.userID = agent_houses.agentID AND houses.houseID = agent_houses.houseID AND userID ='$userID'";
+    $result = mysqli_query($conn, $query);
+
+    $row = mysqli_fetch_assoc($result);
+    while($row = mysqli_fetch_assoc($result)){
+        // while loop begins here
+    ?>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-      <td>@mdo</td>
-      <td><input type="button" name="delete" value="Edit">
-      <input type="button" name="delete" value="Delete"></td>
+      <th scope="row"><?php echo $row['houseID'] ?></th>
+      <td><?php echo $row['description'] ?></td>
+      <td><?php echo $row['price'] ?></td>
+      <td><?php echo $row['listing'] ?></td>
+      <td><?php echo $row['street'] ?></td>
+      <td><?php echo $row['city'] ?></td>
+      <td>
+            <form action="scripts/agent.Edit.House" method="POST">
+                <input type="hidden" name="houseID" value="<?php $row['houseID'] ?>"> 
+                <input type="submit" value="Edit">
+            </form>
+            <form action="scripts/agent.Edit.House" method="POST">
+                <input type="hidden" name="houseID" value="<?php $row['houseID'] ?>"> 
+                <input type="button" name="delete" value="Delete">
+            </form>     
+        </td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>@fat</td>
-      <td>Jacob</td>
-      <td>@fat</td>
-      <td><input type="button" name="delete" value="Edit">
-      <input type="button" name="delete" value="Delete"></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>@twitter</td>
-      <td>Larry</td>
-      <td>@twitter</td>
-      <td><input type="button" name="delete" value="Edit">
-      <input type="button" name="delete" value="Delete"></td>
-    </tr>
+    <?php
+    //while loop ends here
+    }
+        mysql_free_result($result);  
+        mysql_close($conn);
+    ?>
   </tbody>
 </table>
      </div>  
@@ -69,9 +82,6 @@
             <form id="" method="POST" action="scripts/admin.add_house.php" type="multipart/form-data" target="iframe">
                 <input type="file" name="image"> <input type="submit" value="Upload Image">
             </form>
-   
-            
-
          <form id="form" method="POST" action="scripts/agent.Add.House.php" type="multipart/form-data">
                           <!--  
                             <div class="form-group">
@@ -103,13 +113,10 @@
                             </div>
 
                 </form>
-         
      </div>            
-
         </div>
     </div>
 </section>
-
 
     <!---------------- footer ---------------->
 <?php include 'templates/footer.php';?>

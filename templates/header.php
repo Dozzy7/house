@@ -1,4 +1,5 @@
 <header>
+<<<<<<< HEAD
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-collapse collapse">
@@ -10,6 +11,21 @@
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>
+=======
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-collapse collapse">
+                    <ul class="nav nav-justified">
+                        
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="gallery.php">Buy</a></li>
+                        <li><a href="agentlogin.php">Sell</a></li>
+                        <li><a href="about.php">About Us</a></li>
+                        <li><a href="contactus.php">Contact Us</a></li>
+                        <li><a data-scroll href="adminlogin.php">Admin</a></li>
+                    </ul>
+                </div>
+>>>>>>> a068ba41d4bb78254c2e5c2e54107a97a1358ded
             </div>
         </div>
         <div class=navbar-header>
