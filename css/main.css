@@ -59,35 +59,59 @@ body > section{
     clear: both;
     padding: 50px 0;
 }
-
-
-
-
 /*===========For Navigation===========*/
 .navbar-default{
     box-shadow: none;
-    background-color: #31a637;
+    background-color: green;
     border: none;
-    height: 1px;
+    min-height: 90px;
     padding-top: 20px;
 }
 
-.nav >li > a{
+.nav > li >a{
     text-transform: uppercase;
-    color: #fff;
+    color: #ffffff;
     font-size: 1.3em;
-    text-shadow:1px 1px 1px black;
-    -webkit-text-shadow:1px 1px 1px black;
-    -moz-text-shadow:1px 1px 1px black;
+    text-shadow: 1px 1px 1px black;
+    -webkit-text-shadow: 1px 1px 1px black;
+    -moz-text-shadow: 1px 1px 1px black;
 }
-.nav >li>a:hover,
-.nav >li>a:focus{
+
+.nav > li >a:hover,
+.nav > li >a:focus{
+    background-color: #444fff;
+}
+.jumbotron{
+    background: url(../img/slider4.jpg);
+    min-height:360px;
+    padding: 0;
+    color: #ffffff;
+}
+
+.jumbotron h1{
+    padding-top: 280px;
+}
+
+.btn-default{
     background-color: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
 }
+
+.btn-default:hover,
+.btn-default:focus{
+    background-color: #444fff;
+}
+
 
 /*===========For Information===========*/
 #login{
     padding-top: 200px;
+}
+/*===========For slider===========*/
+section#slider{
+    min-height:360px;
+    padding: 0; 
 }
 
 /*===========For Information===========*/
@@ -133,7 +157,7 @@ body > section{
 /*===========For buttons===========*/
 
 #imageContainer1{
-    padding-top: 200px;
+    padding-top: 150px;
     margin: 0 auto;
     height: 350px;
     min-width: 1363px;
@@ -149,7 +173,7 @@ body > section{
 }
 
 #imageContainer2{
-    padding-top: 200px;
+    padding-top: 150px;
     margin: 0 auto;
     height: 350px;
     min-width: 1363px;
@@ -165,7 +189,7 @@ body > section{
 }
 
 #imageContainer3{
-    padding-top: 200px;
+    padding-top: 150px;
     margin: 0 auto;
     height: 350px;
     min-width: 1363px;
@@ -199,6 +223,10 @@ a.list-group-item.active small {
 
 .adding{
     background-color: #b5afaf;
+}
+
+.carousel-control{
+    height: 360px;
 }
 
 #imageContainer{
@@ -239,6 +267,10 @@ a.list-group-item.active small {
 .imageC h2{
     padding-top: 130px;
     font-weight: bolder;
+}
+
+section#about{
+    height: 100px;
 }
 
 /*===========For Footer===========*/
