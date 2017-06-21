@@ -62,7 +62,7 @@ body > section{
 /*===========For Navigation===========*/
 .navbar-default{
     box-shadow: none;
-    background-color: transparent;
+    background-color: green;
     border: none;
     min-height: 90px;
     padding-top: 20px;
@@ -80,6 +80,16 @@ body > section{
 .nav > li >a:hover,
 .nav > li >a:focus{
     background-color: #444fff;
+}
+.jumbotron{
+    background: url(../img/slider4.jpg);
+    min-height:360px;
+    padding: 0;
+    color: #ffffff;
+}
+
+.jumbotron h1{
+    padding-top: 280px;
 }
 
 .btn-default{

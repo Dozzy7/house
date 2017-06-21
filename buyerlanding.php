@@ -62,31 +62,6 @@ require 'includes/db.connection.php';
     </section>
 
 
-    <!---------------- About ---------------->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="row text-center">
-                <h2>What we do!</h2>
-                <div class="col-sm-4">
-                    <img height="90" src="img/sale.png">
-                    <h3 class="text-uppercase text-center">Selling</h3>
-                    <p class="text-center">we sell affordable homes and office space</p>
-                </div>
-
-                <div class="col-sm-4">
-                    <img height="90" src="img/rent.png">
-                    <h3 class="text-uppercase text-center">Renting</h3>
-                    <p class="text-center">we offer rental services from office to homes</p>
-                </div>
-
-                <div class="col-sm-4">
-                    <img height="90" src="img/sold.png">
-                    <h3 class="text-uppercase text-center">Sold</h3>
-                    <p class="text-center">we inform you on houses already sold</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!---------------- Advert ---------------->
     <section id="advert" class="advert">
@@ -98,7 +73,7 @@ require 'includes/db.connection.php';
                     <div class="caption">
                         <h3>25000RMB</h3>
                         <p> Description</p>
-                        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+                        <p><a href="#" class="btn btn-primary" role="button">favourite</a></p>
                     </div>
                     </div>
                 </div>
