@@ -9,7 +9,7 @@ require 'includes/db.connection.php';
 
 <body>
     <!---------------- Header ---------------->
-    <?php include "templates/indexheader.php";?>
+    <?php include "templates/header.php";?>
 
     <!----------------  slider ---------------->
     <section id="slider" class=" carousel slide" data-ride="carousel">
@@ -20,8 +20,7 @@ require 'includes/db.connection.php';
                     <h2> Raydine Housing Agency</h2>
                     <h3>Not you everyday housing Agency</h3>
                     <h4>We not only help you get the next home but we also help your find Office Space and Rental of property.</h4>
-                    <div class="col-sm-6"><button id="s1" class="btn btn-primary" data-target="#signupModal" data-toggle="modal">Sign Up</button></div>
-                    <div class="col-sm-6"><button id="s0" class="btn btn-primary" data-target="#loginModal" data-toggle="modal">Login</button></div>
+                    
                 </div>
             </div>
 
@@ -65,63 +64,19 @@ require 'includes/db.connection.php';
     <!---------------- About ---------------->
     <section id="about" class="about">
         <div class="container">
-            <div class="row text-center">
-                <h2>What we do!</h2>
-                <div class="col-sm-4">
-                    <img height="90" src="img/sale.png">
-                    <h3 class="text-uppercase text-center">Selling</h3>
-                    <p class="text-center">we sell affordable homes and office space</p>
+                <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                    <img src="..." alt="...">
+                    <div class="caption">
+                        <h3>25000RMB</h3>
+                        <p> Description</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+                    </div>
+                    </div>
                 </div>
-
-                <div class="col-sm-4">
-                    <img height="90" src="img/rent.png">
-                    <h3 class="text-uppercase text-center">Renting</h3>
-                    <p class="text-center">we offer rental services from office to homes</p>
-                </div>
-
-                <div class="col-sm-4">
-                    <img height="90" src="img/sold.png">
-                    <h3 class="text-uppercase text-center">Sold</h3>
-                    <p class="text-center">we inform you on houses already sold</p>
                 </div>
             </div>
-        </div>
-    </section>
- 
-
-    <!---------------- advertise  ---------------->
-    <section id="advert" class="advert">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-md-3">
-                    <?php
-                        $query = "SELECT * FROM houses";
-                        $result = mysqli_query($conn,$query);
-                        $row = mysqli_fetch_assoc($result);
-                        while($row = mysqli_fetch_assoc($result)){
-                        ?>
-                        <div class="thumbnail">
-                            <img src="img/House4.jpg" alt="house">
-                            <div class="caption">
-                                <h3>
-                                    <?php echo $row['price'] ?>
-                                </h3>
-                                <p>
-                                    <?php echo $row['description'] ?>
-                                </p>
-                                <p align="center">
-                                    <form>
-                                        <input type="submit" name="" value="Like">
-                                    </form>
-                                </p>
-                            </div>
-                        </div>
-                        <?php 
-                        }
-                        ?>
-                </div>
-            </div>
-        </div>
         </div>
     </section>
     <!---------------- Footer ---------------->

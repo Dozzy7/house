@@ -131,14 +131,11 @@ body > section{
     }
 
 /*===========For buttons===========*/
-#loggingin{
-    text-align: center;
-}
 
 #imageContainer1{
     padding-top: 200px;
     margin: 0 auto;
-    height: 670px;
+    height: 350px;
     min-width: 1363px;
     background-image: url(../img/slider12.jpg);
     background-size: 100%;
@@ -154,7 +151,7 @@ body > section{
 #imageContainer2{
     padding-top: 200px;
     margin: 0 auto;
-    height: 670px;
+    height: 350px;
     min-width: 1363px;
     background-image: url(../img/slider21.jpg);
     background-size: 100%;
@@ -170,7 +167,7 @@ body > section{
 #imageContainer3{
     padding-top: 200px;
     margin: 0 auto;
-    height: 670px;
+    height: 350px;
     min-width: 1363px;
     background-image: url(../img/slider31.jpg);
     background-size: 100%;
@@ -219,11 +216,6 @@ a.list-group-item.active small {
     color: #ffffff;
 }
 
-
-/*===========For upload button===========*/
-#btn_upload{
-    background-image: url(img/add.png);
-}
 /*===========For About us===========*/
 #about{
     padding-top: 0px;
