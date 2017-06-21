@@ -9,7 +9,7 @@
       $password = mysqli_escape_string($conn,$_POST['password']); 
     
       // 
-      $query = " SELECT username FROM admin WHERE ausername = '$username' and apassword = '$password' ";
+      $query = " SELECT ausername FROM admin WHERE ausername = '$username' and apassword = '$password' ";
       $result = mysqli_query($conn, $query);
       
       $row = mysqli_fetch_assoc($result);
