@@ -12,7 +12,7 @@
    $street;
    $city;
 
-   if(isset(($_FILES['image']))){
+   if(($_FILES['image'])){
      
       $file_name = $_FILES['image']['name'];
       $file_size =$_FILES['image']['size'];
@@ -67,7 +67,7 @@
             print_r('Could not enter data: ' . mysql_error());
         }else{
         // go to this page after insertionn has been completed
-        header("location:../agentpanel.php");
+         header("location:../agentpanel.php");
         } 
 }else{ 
     echo ($errors); 

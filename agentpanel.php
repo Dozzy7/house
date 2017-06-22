@@ -79,7 +79,7 @@
          <form id="form" method="POST" action="scripts/agent.Add.House.php" type="multipart/form-data">
                             <input type="hidden" name="userID" value="<?php echo $userID ?>">
                             <div class="form-group">
-                                <input id="image" type="file"  name="image" required>
+                                <input id="image" type="file" name="image" required>
                             </div> 
                             <div class="form-group">
                                 <input class="form-control" type="number" placeholder="Price" name="price" required>
@@ -94,7 +94,7 @@
                                 <input class="form-control" type="text" placeholder="Description" name="description" required>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="text" placeholder="Number of rooms" name="rooms" required>
+                                <input class="form-control" type="number" placeholder="Number of rooms" name="rooms" required>
                             </div>
                             
                             <div class="form-group">
@@ -104,8 +104,7 @@
                             <div class="form-group text-center">
                                 <input class="btn btn-primary" type="submit" id="insert" name="insert" value="Confirm">
                             </div>
-
-                </form>
+            </form>
      </div>            
         </div>
     </div>
