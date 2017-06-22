@@ -72,7 +72,7 @@ ob_start();
     <body>
 
         <!---------------- Header ---------------->
-        <?php include "templates/header.php";?>
+        <?php //include "templates/header.php";?>
 
         <!---------------- loging in for User---------------->
 
@@ -122,7 +122,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-        </section> >
+        </section>
         <!---------------- Ends here ---------------->
         <!---------------- Footer ---------------->
         <?php include 'templates/footer.php';?>
