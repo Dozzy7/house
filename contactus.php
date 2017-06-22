@@ -12,7 +12,6 @@ require 'includes/db.connection.php';
      <?php include 'templates/header.php';?>
 
     <!----------------  backgroundimage ---------------->
-    <?php include 'templates/backgroundimage.php';?>
 
      <!----------------  ---------------->
      <section>
