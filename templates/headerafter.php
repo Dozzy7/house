@@ -6,12 +6,12 @@
                         
                         <li><a href="index.php">Home</a></li>
                         <li><a href="buyerlanding.php">Buy</a></li>
+                        <li><a href="favourite.php">Favorite</a></li>
                         <li><a href="agentpanel.php">Sell</a></li>
                         <li><a href="about.php">About Us</a></li>
-                        <li><a href="contactus.php">Contact Us</a></li>
-                        <li><a data-scroll href="adminpanel.php">Admin</a></li>
+                        <li><a data-scroll href="contactus.php">Contact Us</a></li>
                        <li> 
-                       <form action="scripts/logout.php">
+                       <form action="scripts/<?php echo $page?>logout.php">
                            <input type="submit" name="logout" id="logout" class="btn btn-default" value="Logout">
                        </form>
                        </li> 

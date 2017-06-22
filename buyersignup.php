@@ -50,8 +50,8 @@ ob_start();
       if($count == 1) {
           $error = "User Already Exists";
       }else {
-          if($password === $password1){
-            $query1 = "INSERT INTO buyers VALUES( null,'$username','$firstname','$lastname','$contactno','$password','$email' ";
+          if($password == $password1){
+            $query1 = "INSERT INTO buyers(userID,username,f_name,l_name,contact,upassword,email) VALUES(null,'$username','$firstname','$lastname','$contactno','$password','$email' ";
             $retval = mysqli_query($conn,$query1);
             if($retval){
                 header("location: ../index.php"); 

@@ -1,6 +1,7 @@
 <?php
 ob_start(); 
-require 'includes/db.connection.php';
+include 'scripts/agent.Session.php';
+$page = "buyer";
 ?>
 <!doctype html>
 <html class="no-js" lang="">
@@ -18,7 +19,7 @@ require 'includes/db.connection.php';
             <div class="item active">
                 <div id="imageContainer1" class="text-center">
                     <h2> Raydine Housing Agency</h2>
-                    <h3>Not you everyday housing Agency</h3>
+                    <h3>Not your everyday housing Agency</h3>
                     <h4>We not only help you get the next home but we also help your find Office Space and Rental of property.</h4>
                     
                 </div>
@@ -27,8 +28,8 @@ require 'includes/db.connection.php';
             <div class="item">
                 <div id="imageContainer2">
                     <div class="text-center">
-                        <h2>Signup for More</h2>
-                        <h3>Get to like your property and arrange appointments with the sellers</h3>
+                        <h2>Favourite</h2>
+                        <h3>Get to like your property and save the so you don't have to look for them again</h3>
                     </div>
                 </div>
             </div>
@@ -99,8 +100,7 @@ require 'includes/db.connection.php';
                 ?>
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
-                    <img src="img/house2.jpg">
-                    <?php //echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image'] ).'"/>'?>
+                    <img src="<?php echo $row['image'] ?>"/>
                     <div class="caption">
                         <h3><?php echo $row['price'] ?></h3>
                         <p> <?php echo $row['description'] ?></p>

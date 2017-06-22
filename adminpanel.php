@@ -1,5 +1,6 @@
 <?php
     include 'scripts/admin.Session.php';
+    $page = "admin";
 ?>
 <!doctype html>
 <html class="no-js" lang="en">

@@ -1,5 +1,6 @@
 <?php
     include 'scripts/agent.Session.php';
+    $page ="agent";
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -43,7 +44,7 @@
     ?>
     <tr>
       <th scope="row"><?php echo $row['houseID'] ?></th>
-      <td><?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image'] ).'" class="img-thumnail" />'?></td> 
+      <td><img src="<?php echo $row['image'] ?>"/></td> 
       <td><?php echo $row['description'] ?></td>
       <td><?php echo $row['price'] ?></td>
       <td><?php echo $row['listing'] ?></td>
