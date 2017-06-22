@@ -1,23 +1,42 @@
 <?php
 ob_start(); 
 
-   include_once '../includes/db.connection.php';
+   include_once 'includes/db.connection.php';
    session_start();
-   
-   $error="";
 
+   $error="";
+   
    if($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        if(isset($_POST['firstname'])){
+            $firstname = trim(mysqli_real_escape_string($conn,$_POST['firstName']));
+        }else{
+            $firstname ="";
+        }
+         if(isset($_POST['lastName'])){
+            $lastname = trim(mysqli_real_escape_string($conn,$_POST['lastName']));
+        }else{
+            $lastname="";
+        }
+         if(isset($_POST['firstname'])){
+            $email = trim(mysqli_real_escape_string($conn,$_POST['userEmail']));
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $error = "Invalid email, please re-enter valid email"; 
+}
+        }else{
+            $email ="";
+        }
       
       // username and password sent from form 
-      $username = trim(mysqli_real_escape_string($conn,$_POST['userName']));
+      $username = trim(mysqli_real_escape_string($conn,$_POST['username']));
       $password = trim(mysqli_real_escape_string($conn,$_POST['password']));
-      $password1 = trim(mysqli_real_escape_string($conn,$_POST['password1']));
-      $firstname = trim(mysqli_real_escape_string($conn,$_POST['firstName']));
-      $lastname = trim(mysqli_real_escape_string($conn,$_POST['lastName']));
+      $password1 = trim(mysqli_real_escape_string($conn,$_POST['passworda']));
+
       $contactno = trim(mysqli_real_escape_string($conn,$_POST['contactNumber']));
       $email = trim(mysqli_real_escape_string($conn,$_POST['userEmail']));
     
-      // 
+      //
+
       $query = " SELECT * FROM agents WHERE username = '$username' and apassword = '$password' ";
       $result = mysqli_query($conn,$query);
       
@@ -29,11 +48,16 @@ ob_start();
       
       // If result matched $myusername and $mypassword, table row must be 1 row	
       if($count == 1) {
-          $error = "User alreadey Exists";
+          $error = "User Already Exists";
       }else {
-          if($password === $password1){
-            $query = "INSERT INTO agents VALUES( null,'$username','$firstname','$lastname','$contactno','$password','$email' ";
-            header("location: ../agentlogin.php");                               
+          if($password == $password1){
+            $query1 = "INSERT INTO `agents`(`userID`, `username`, `f_name`, `l_name`, `contact`, `upassword`, `email`) VALUES (null, '$username','$firstname','$lastname','$contactno','$password','$email')";
+            $retval = mysqli_query($conn,$query1);
+            if($retval){
+                header("location: ../agentlogin.php"); 
+            }else{
+                $error = "Failed User not created Try Again";
+            }                              
           }else{
               $error = "Password's do not match";
           }        

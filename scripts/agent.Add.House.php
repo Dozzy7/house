@@ -12,7 +12,7 @@
    $street;
    $city;
 
-   if(isset($_FILES['image'])){
+   if(isset(($_FILES['image']))){
      
       $file_name = $_FILES['image']['name'];
       $file_size =$_FILES['image']['size'];
@@ -66,9 +66,8 @@
         if(! $retval){
             print_r('Could not enter data: ' . mysql_error());
         }else{
-        // move_uploaded_file($_FILES["file"]["name"],"houses/" . $random_string .".jpg");
         // go to this page after insertionn has been completed
-        //header("location:../agentpanel.php");
+        header("location:../agentpanel.php");
         } 
 }else{ 
     echo ($errors); 

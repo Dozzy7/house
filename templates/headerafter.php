@@ -11,7 +11,7 @@
                         <li><a href="about.php">About Us</a></li>
                         <li><a data-scroll href="contactus.php">Contact Us</a></li>
                        <li> 
-                       <form action="scripts/<?php echo $page?>logout.php">
+                       <form action="scripts/<?php echo $page."logout.php"?>">
                            <input type="submit" name="logout" id="logout" class="btn btn-default" value="Logout">
                        </form>
                        </li> 

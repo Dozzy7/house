@@ -12,7 +12,7 @@ include_once 'includes/db.connection.php';
       $password = mysqli_escape_string($conn,$_POST['password']); 
     
       // 
-      $query = " SELECT username FROM agents WHERE username = '$username' and apassword = '$password' ";
+      $query = " SELECT username FROM buyers WHERE username = '$username' and upassword = '$password' ";
       $result = mysqli_query($conn, $query);
       
       $row = mysqli_fetch_assoc($result);
@@ -23,9 +23,9 @@ include_once 'includes/db.connection.php';
       
       // If result matched $myusername and $mypassword, table row must be 1 row	
       if($count == 1) {
-         isset($_SESSION['login_agent']);
-         $_SESSION['login_agent'] = $username;
-         header("location: ../agentpanel.php");
+         isset($_SESSION['login_buyer']);
+         $_SESSION['login_buyer'] = $username;
+         header("location: ../buyerlanding.php");
       }else {
          $error = "username or password is invalid";
       }
