@@ -5,12 +5,16 @@
                     <ul class="nav nav-justified">
                         
                         <li><a href="index.php">Home</a></li>
-                        <li><a href="gallery.php">Buy</a></li>
-                        <li><a href="agentlogin.php">Sell</a></li>
+                        <li><a href="buyerlanding.php">Buy</a></li>
+                        <li><a href="agentpanel.php">Sell</a></li>
                         <li><a href="about.php">About Us</a></li>
                         <li><a href="contactus.php">Contact Us</a></li>
-                        <li><a data-scroll href="adminlogin.php">Admin</a></li>
-                       <li><input type="button" name="logout" id="logout" class="btn btn-default" value="Logout"></li> 
+                        <li><a data-scroll href="adminpanel.php">Admin</a></li>
+                       <li> 
+                       <form action="scripts/logout.php">
+                           <input type="submit" name="logout" id="logout" class="btn btn-default" value="Logout">
+                       </form>
+                       </li> 
                     </ul>
                 </div>
             </div>

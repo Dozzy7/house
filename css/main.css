@@ -55,12 +55,16 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-body > section{
+
+body>section {
     clear: both;
     padding: 50px 0;
 }
+
+
 /*===========For Navigation===========*/
-.navbar-default{
+
+.navbar-default {
     box-shadow: none;
     background-color: green;
     border: none;
@@ -68,7 +72,7 @@ body > section{
     padding-top: 20px;
 }
 
-.nav > li >a{
+.nav>li>a {
     text-transform: uppercase;
     color: #ffffff;
     font-size: 1.3em;
@@ -77,86 +81,100 @@ body > section{
     -moz-text-shadow: 1px 1px 1px black;
 }
 
-.nav > li >a:hover,
-.nav > li >a:focus{
+.nav>li>a:hover,
+.nav>li>a:focus {
     background-color: #444fff;
 }
-.jumbotron{
+
+.jumbotron {
     background: url(../img/slider4.jpg);
-    min-height:360px;
+    min-height: 360px;
     padding: 0;
     color: #ffffff;
 }
 
-.jumbotron h1{
+.jumbotron h1 {
     padding-top: 280px;
 }
 
-.btn-default{
+.btn-default {
     background-color: transparent;
     color: #ffffff;
     border-color: #ffffff;
 }
 
 .btn-default:hover,
-.btn-default:focus{
+.btn-default:focus {
     background-color: #444fff;
 }
 
+.row {
+    margin-top: 30px;
+}
+
 
 /*===========For Information===========*/
-#login{
+
+#login {
     padding-top: 200px;
 }
+
+
 /*===========For slider===========*/
-section#slider{
-    min-height:360px;
-    padding: 0; 
+
+section#slider {
+    min-height: 360px;
+    padding: 0;
 }
 
+
 /*===========For Information===========*/
-.blue-circle img{
-  min-height: 50px;
+
+.blue-circle img {
+    min-height: 50px;
 }
 
 
 /*===========For Login form===========*/
-.wrapper {  
+
+.wrapper {
     margin-top: 80px;
-  margin-bottom: 80px;
+    margin-bottom: 80px;
 }
 
 .form-signin {
-  max-width: 380px;
-  padding: 15px 35px 45px;
-  margin: 0 auto;
-  background-color: #fff;
-  border: 1px solid rgba(0,0,0,0.1);  
+    max-width: 380px;
+    padding: 15px 35px 45px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
-  .form-signin-heading,
-    .checkbox {
-      margin-bottom: 30px;
-    }
 
-    .checkbox {
-      font-weight: normal;
-    }
+.form-signin-heading,
+.checkbox {
+    margin-bottom: 30px;
+}
 
-    input[type="text"] {
-      margin-bottom: -1px;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-    }
+.checkbox {
+    font-weight: normal;
+}
 
-    input[type="password"] {
-      margin-bottom: 20px;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-    }
+input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+input[type="password"] {
+    margin-bottom: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
 
 /*===========For buttons===========*/
 
-#imageContainer1{
+#imageContainer1 {
     padding-top: 150px;
     margin: 0 auto;
     height: 350px;
@@ -165,14 +183,14 @@ section#slider{
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center center; 
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     color: #ffffff;
 }
 
-#imageContainer2{
+#imageContainer2 {
     padding-top: 150px;
     margin: 0 auto;
     height: 350px;
@@ -181,14 +199,14 @@ section#slider{
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center center; 
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     color: #ffffff;
 }
 
-#imageContainer3{
+#imageContainer3 {
     padding-top: 150px;
     margin: 0 auto;
     height: 350px;
@@ -197,84 +215,93 @@ section#slider{
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center center; 
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     color: #ffffff;
 }
+
+
 /*===========================================================
                         For Admin Page
 ===========================================================*/
-.adminC{
+
+.adminC {
     padding-top: 100px;
 }
 
 a.list-group-item {
-    height:auto;
-    min-height:220px;
-}
-a.list-group-item.active small {
-    color:#fff;
-}
-.stars {
-    margin:20px auto 1px;    
+    height: auto;
+    min-height: 220px;
 }
 
-.adding{
+a.list-group-item.active small {
+    color: #fff;
+}
+
+.stars {
+    margin: 20px auto 1px;
+}
+
+.adding {
     background-color: #b5afaf;
 }
 
-.carousel-control{
+.carousel-control {
     height: 360px;
 }
 
-#imageContainer{
-  margin: 0 auto;
+#imageContainer {
+    margin: 0 auto;
     height: 360px;
     min-width: 1363px;
     background-image: url(../img/slider4.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center center; 
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     color: #ffffff;
 }
 
+
 /*===========For About us===========*/
-#about{
+
+#about {
     padding-top: 0px;
     padding-bottom: 130px;
 }
 
-.imageC{
+.imageC {
     margin: 0 auto;
     height: 360px;
     min-width: 400px;
     background-image: url(../img/img1.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: center center; 
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     color: #ffffff;
 }
 
-.imageC h2{
+.imageC h2 {
     padding-top: 130px;
     font-weight: bolder;
 }
 
-section#about{
+section#about {
     height: 100px;
 }
 
+
 /*===========For Footer===========*/
-.bg-4 { 
+
+.bg-4 {
     background-color: #2f2f2f;
     color: #ffffff;
 }
@@ -284,16 +311,13 @@ section#about{
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-
-}
+@media only screen and (min-width: 35em) {}
 
 @media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {}
 
-}
 
 /* ==========================================================================
    Helper classes
@@ -343,6 +367,7 @@ section#about{
     *zoom: 1;
 }
 
+
 /* ==========================================================================
    Print styles
    ========================================================================== */
@@ -356,51 +381,41 @@ section#about{
         box-shadow: none !important;
         text-shadow: none !important;
     }
-
     a,
     a:visited {
         text-decoration: underline;
     }
-
     a[href]:after {
         content: " (" attr(href) ")";
     }
-
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
-
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
     }
-
     pre,
     blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
-
     thead {
         display: table-header-group;
     }
-
     tr,
     img {
         page-break-inside: avoid;
     }
-
     img {
         max-width: 100% !important;
     }
-
     p,
     h2,
     h3 {
         orphans: 3;
         widows: 3;
     }
-
     h2,
     h3 {
         page-break-after: avoid;

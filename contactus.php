@@ -28,26 +28,27 @@ require 'includes/db.connection.php';
                  <div class="col-sm-7">
                      <h3>How Raydine Housing Agency </h3></br></br>
                      
-                        <p>Raydine was made in 2013 in Jinzhou, China. Three college friends - Matt,</br>
-                         Douglas, and John - were trying to find a place</br>
-                        to live but had little luck. Frustrated, they pooled their collective</br>
-                        resources and built a unique rentals marketplace with the first ever</br>
-                            map-based search.</p>
+                        <p>RaydineHousing Agency was made in 2013 in Jinzhou, China.</br>
+                         It is part of the fulfilment for a Bachelor of Engineering in Computer Science Degree.</br>
+                        The Website Allows Agents to list house so that pontential buyers can look at them and buy</br>
+                        </p>
+
+                        <p>The website Front-End was made using </br>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        </p>
+                        <p>Additional Technologies </br>
+                        <li>Bootstrap Frame Work</li>
+                        <li>jQuery</li>
+                        </p>
                         
-                       <p> The HotPads team moved to San Francisco in 2011 was acquired</br>
-                        by Zillow Group in 2012. We are currently located in the sunny</br>
-                        Financial District, based in the Zillow Group San Francisco offices. </p></br></br>
-                        
-                       <h3> Who Is HotPads?</h3></br></br>
-                        
-                        <p>At HotPads, we believe you should love where you live.</br>
-                        We also know that finding that perfect apartment can be difficult</br>
-                        and stressful.</p></br>
-                        
-                        <p>HotPads eases the pain of looking for your next home by</br>
-                        helping your make smarter decisions about where to live. </br>
-                        We help people navigate the rental market, and keep up with</br>
-                        fast-moving inventory.</p>
+                        <p>The website Back-End was made using </br>
+                        <li>PHP</li>
+                        <li>MySQL</li>                        
+                        </p>
+
+                        <p>The Website runs on an Apache 2.4 HTTP server</p>                        
                  </div>
              </div>
          </div>
@@ -55,10 +56,6 @@ require 'includes/db.connection.php';
      
     <!---------------- footer ---------------->
 <?php include 'templates/footer.php';?>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
-        <script src="js/main.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-    </body>
+</body>
 </html>

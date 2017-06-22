@@ -1,5 +1,36 @@
 <?php
 ob_start(); 
+
+   include_once 'includes/db.connection.php';
+   session_start();
+
+    $error = "";
+   
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+      
+      // username and password sent from form 
+      $username = mysqli_escape_string($conn,$_POST['username']);
+      $password = mysqli_escape_string($conn,$_POST['password']); 
+    
+      // 
+      $query = " SELECT username FROM agents WHERE username = '$username' and apassword = '$password' ";
+      $result = mysqli_query($conn, $query);
+      
+      $row = mysqli_fetch_assoc($result);
+      $active = $row['username'];
+      
+      //check if the record exists
+      $count = mysqli_num_rows($result);
+      
+      // If result matched $myusername and $mypassword, table row must be 1 row	
+      if($count == 1) {
+         isset($_SESSION['login_agent']);
+         $_SESSION['login_agent'] = $username;
+         header("location: ../agentpanel.php");
+      }else {
+         $error = "username or password is invalid";
+      }
+   }
 ?>
 <!doctype html>
 <html class="no-js" lang="">
@@ -19,10 +50,11 @@ ob_start();
      <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Login for Agent</h4>
+                <h4 class="modal-title">Agent Login</h4>
                     </div>
                         <div class="modal-body">
-                        <form action="scripts/script.Agent.Login.php" method="POST">
+                        <p><span style="color:red;"><?php echo $error; ?></span></p>
+                        <form action="agentlogin.php" method="POST">
                             <div class="form-group">
                                 <input class="form-control" placeholder="Username" type="text" name="username" required>
                             </div>
@@ -38,7 +70,7 @@ ob_start();
                      
                     <div class="text-center">
                         <p>
-                            <li>Not Yet A Memeber <a href="">Signup as Agent </a></li>
+                            <li>Not Yet A Memeber <a href="agentsignup.php">Signup as Agent </a></li>
                         </p>
                     </div>
                 </div>
@@ -51,9 +83,5 @@ ob_start();
     <!---------------- Footer ---------------->
     <?php include 'templates/footer.php';?>
 
-        <script src="js/vendor/jquery-1.11.2.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src="js/main.js"></script>
-        <script src="js/bootstrap.min.js"></script>
     </body>
 </html>

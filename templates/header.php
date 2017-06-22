@@ -5,7 +5,7 @@
                     <ul class="nav nav-justified">
                         
                         <li><a href="index.php">Home</a></li>
-                        <li><a href="gallery.php">Buy</a></li>
+                        <li><a href="index.php">Buy</a></li>
                         <li><a href="agentlogin.php">Sell</a></li>
                         <li><a href="about.php">About Us</a></li>
                         <li><a href="contactus.php">Contact Us</a></li>

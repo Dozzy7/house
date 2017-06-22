@@ -1,5 +1,36 @@
 <?php
 ob_start(); 
+
+   include_once 'includes/db.connection.php';
+   session_start();
+   
+   $error = "";
+
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+      
+      // username and password sent from form 
+      $username = mysqli_escape_string($conn,$_POST['username']);
+      $password = mysqli_escape_string($conn,$_POST['password']); 
+    
+      // 
+      $query = " SELECT ausername FROM admin WHERE ausername = '$username' and apassword = '$password' ";
+      $result = mysqli_query($conn, $query);
+      
+      $row = mysqli_fetch_assoc($result);
+      $active = $row['ausername'];
+      
+      //check if the record exists
+      $count = mysqli_num_rows($result);
+      
+      // If result matched $myusername and $mypassword, table row must be 1 row	
+      if($count == 1) {
+         isset($_SESSION['login_admin']);
+         $_SESSION['login_admin'] = $username;
+         header("location: ../adminpanel.php");
+      }else {
+         $error = "username or password is invalid";
+      }
+   }
 ?>
 <!doctype html>
 <html class="no-js" lang="">
@@ -22,7 +53,8 @@ ob_start();
                 <h4 class="modal-title">Login for Admin</h4>
                     </div>
                         <div class="modal-body">
-                        <form action="scripts/script.Admin.Login.php" method="POST">
+                        <p><span style="color:red;"><?php echo $error; ?></span></p>
+                        <form action="adminlogin.php" method="POST">
                             <div class="form-group">
                                 <input class="form-control" placeholder="Username" type="text" name="username" required>
                             </div>
@@ -47,10 +79,6 @@ ob_start();
 
     <!---------------- Footer ---------------->
     <?php include 'templates/footer.php';?>
-
-        <script src="js/vendor/jquery-1.11.2.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src="js/main.js"></script>
-        <script src="js/bootstrap.min.js"></script>
     </body>
 </html>
+

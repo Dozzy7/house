@@ -7,7 +7,7 @@
 <body>
 
     <!---------------- Header ---------------->
-    <?php include 'templates/header.php';?>
+    <?php include 'templates/headerafter.php';?>
 
     <!----------------  backgroundimage ---------------->
 
@@ -184,13 +184,7 @@
 
     <!---------------- footer ---------------->
     <?php include 'templates/footer.php';?>
-    <script src="js/vendor/jquery-1.11.2.min.js"></script>
-    <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
-    </script>
 
-    <script src="js/main.js"></script>
-    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

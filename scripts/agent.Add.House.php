@@ -45,7 +45,7 @@
           die('Could not enter data: ' . mysql_error());
       }else{
 
-       move_uploaded_file($_FILES["file"]["name"],"houses/" . $random_string .".jpg");
+       // move_uploaded_file($_FILES["file"]["name"],"houses/" . $random_string .".jpg");
        // go to this page after insertionn has been completed
        header("location:../agentpanel.php");
       } 

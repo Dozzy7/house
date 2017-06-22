@@ -99,7 +99,8 @@ require 'includes/db.connection.php';
                 ?>
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
-                    <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image'] ).'"/>'?>
+                    <img src="img/house2.jpg">
+                    <?php //echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image'] ).'"/>'?>
                     <div class="caption">
                         <h3><?php echo $row['price'] ?></h3>
                         <p> <?php echo $row['description'] ?></p>
@@ -117,12 +118,6 @@ require 'includes/db.connection.php';
     <!---------------- Footer ---------------->
     <?php include 'templates/footer.php';?>
 
-    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
-    <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
-    </script>
-    <script src="js/main.js"></script>
-    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

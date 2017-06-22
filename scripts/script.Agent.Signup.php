@@ -24,12 +24,11 @@
       
       // If result matched $myusername and $mypassword, table row must be 1 row	
       if($count == 1) {
-          $error = "User Alreadey Exists";
-          $_SESSION['login_error'] = $error;
-         
+          $error = "User Alreadey Exists";         
          header("location: ../agentlogin.php");
       }else {
-          $query = "INSERT INTO agents VALUES( null,'$username','$firstname','$lastname','$contactno','$password','$email' ";
+         $query = "INSERT INTO agents VALUES( null,'$username','$firstname','$lastname','$contactno','$password','$email' ";
          header("location: ../agentpanel.php");
       }
    }
+   ?>
