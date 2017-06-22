@@ -37,12 +37,6 @@ ob_start();
                             </div>
                      
                     <div class="text-center">
-                        <p>
-                            <li><a href="">Signup as Buyer </a></li>
-                            <li><a href="">Signup as Agent </a></li>
-                            <li><a href="">Login as Buyer</a></li>
-                            <li><a href=""> Login as Agent</a></li>
-                        </p>
                     </div>
                 </div>
             </div>           

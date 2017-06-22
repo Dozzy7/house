@@ -14,17 +14,17 @@ require 'includes/db.connection.php';
 
         <!---------------- loging in for User---------------->
 
-        <?php include 'templates/widget/login.php';?>
 
         <section id="signup">
             <div class=container>
                 <div class="row">
                     <!---------------- Signing Up moddeling starts here ---------------->
-                    <h2>Signup for user</h2>
+                    
                     <div class="modal-dialog modal-sm">
                         <div class="modal-content">
+                            
                             <div class="modal-header">
-
+                                <h2>Agent Sign Up</h2>
                                 <h4 class="modal-title">Sign Up</h4>
                             </div>
                             <div class="modal-body">
