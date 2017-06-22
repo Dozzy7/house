@@ -271,7 +271,7 @@ a.list-group-item.active small {
 /*===========For About us===========*/
 
 #about {
-    padding-top: 0px;
+    padding-top: 80px;
     padding-bottom: 130px;
 }
 
@@ -306,6 +306,34 @@ section#about {
     color: #ffffff;
 }
 
+.aboutr{
+    padding-bottom: 360px;
+    padding-top: 0px;
+}
+
+.bulb{
+    margin: 0 auto;
+    height: 360px;
+    min-width: 400px;
+    background-image: url(../img/bulb.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    color: #ffffff;
+    
+}
+.bulb h1{
+    font-weight: bold;
+    font-size: 3.6em;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
 
 /* ==========================================================================
    Media Queries

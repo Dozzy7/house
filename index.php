@@ -46,9 +46,10 @@ include_once 'includes/db.connection.php';
                     <ul class="nav nav-justified">
                         
                         <li><a href="agentlogin.php">Login as Agent</a></li>
+                        <li><a href="adminlogin.php">Login as Admin</a></li>
                         <li><a href="about.php">About Us</a></li>
                         <li><a href="contactus.php">Contact Us</a></li>
-                        <li><a href="adminlogin.php">Admin</a></li>
+                        
                     </ul>
                 </div>
             </div>
