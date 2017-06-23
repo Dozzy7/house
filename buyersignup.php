@@ -31,10 +31,9 @@ ob_start();
       $username = trim(mysqli_real_escape_string($conn,$_POST['username']));
       $password = trim(mysqli_real_escape_string($conn,$_POST['password']));
       $password1 = trim(mysqli_real_escape_string($conn,$_POST['passworda']));
-
       $contactno = trim(mysqli_real_escape_string($conn,$_POST['contactNumber']));
       $email = trim(mysqli_real_escape_string($conn,$_POST['userEmail']));
-    
+      
       //
 
       $query = " SELECT * FROM buyers WHERE username = '$username' and upassword = '$password' ";
@@ -48,7 +47,7 @@ ob_start();
       
       // If result matched $myusername and $mypassword, table row must be 1 row	
       if($count == 1) {
-          $error = "User Already Exists";
+          $error = "Username Already Exists";
       }else {
           if($password == $password1){
             $query1 = "INSERT INTO `buyers`(`userID`, `username`, `f_name`, `l_name`, `contact`, `upassword`, `email`) VALUES (null, '$username','$firstname','$lastname','$contactno','$password','$email')";
@@ -73,9 +72,6 @@ ob_start();
 
       <!---------------- Header ---------------->
     <?php //include "templates/header.php";?> 
-
-
-    
 
     <!---------------- loging in for User---------------->
 <section id="signup">

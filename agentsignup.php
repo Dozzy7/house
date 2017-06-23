@@ -37,7 +37,7 @@ ob_start();
     
       //
 
-      $query = " SELECT * FROM agents WHERE username = '$username' and apassword = '$password' ";
+      $query = " SELECT * FROM agents WHERE username = '$username' ";
       $result = mysqli_query($conn,$query);
       
       $row = mysqli_fetch_assoc($result);
@@ -48,11 +48,11 @@ ob_start();
       
       // If result matched $myusername and $mypassword, table row must be 1 row	
       if($count == 1) {
-          $error = "User Already Exists";
+          $error = "Username Already Exists";
       }else {
           if($password == $password1){
-            $query1 = "INSERT INTO `agents`(`userID`, `username`, `f_name`, `l_name`, `contact`, `upassword`, `email`) VALUES (null, '$username','$firstname','$lastname','$contactno','$password','$email')";
-            $retval = mysqli_query($conn,$query1);
+            $query = "INSERT INTO `agents`(`userID`, `username`, `f_name`, `l_name`, `contact`, `upassword`, `email`) VALUES (null, '$username','$firstname','$lastname','$contactno','$password','$email')";
+            $retval = mysqli_query($conn,$query);
             if($retval){
                 header("location: ../agentlogin.php"); 
             }else{
@@ -96,22 +96,22 @@ ob_start();
                                         <input class="form-control" placeholder="Username" type="text" name="username" required>
                                     </div>
                                     <div class="form-group">
-                                        <input class="form-control" placeholder="First Name" type="text" id="firstName" name="firstName" required>
+                                        <input class="form-control" placeholder="First Name" type="text" id="firstName" name="firstName" >
                                     </div>
                                     <div class="form-group">
-                                        <input class="form-control" placeholder="Last Name" type="text" id="lastName" name="lastName" required>
+                                        <input class="form-control" placeholder="Last Name" type="text" id="lastName" name="lastName" 
                                     </div>
                                     <div class="form-group">
-                                        <input class="form-control" placeholder="Contact Number" type="text" id="contactNumber" name="contacNumber" required>
+                                        <input class="form-control" placeholder="Contact Number" type="text" id="contactNumber" name="contactNumber" required>
                                     </div>
                                     <div class="form-group">
-                                        <input class="form-control" placeholder="Email" type="email" id="userEmail" name="userEmail" required>
+                                        <input class="form-control" placeholder="Email" type="email" id="userEmail" name="userEmail" >
                                     </div>
                                     <div class="form-group">
                                         <input class="form-control" placeholder="Password" type="password" name="password" required>
                                     </div>
                                     <div class="form-group">
-                                        <input class="form-control" placeholder="Renter Password" type="password" id="inputPasword" name="password1" required>
+                                        <input class="form-control" placeholder="Renter Password" type="password" id="inputPasword1" name="passworda" required>
                                     </div>
                                     <div class="modal-footer">
                                     <button class="btn btn-primary btn-block" type="submit">Sign Up</button>
